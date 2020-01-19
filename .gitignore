@@ -1,0 +1,7 @@
+sample_data/
+*.jpg
+*.json
+
+.idea/
+__pycache__/
+venv/
