@@ -15,7 +15,7 @@ def cleanHTML(html):
 def read_news():
     currentDate = str(datetime.datetime.now().date())
     feed_link = 'http://factmil.com/news/rss/'
-    out_file = os.path.join('Новости на ' + currentDate + '.json')
+    out_file = os.path.join('./news/factMilitary/Новости на ' + currentDate + '.json')
 
     d = feedparser.parse(feed_link)
     print(d)
