@@ -18,7 +18,7 @@ def read_news():
     out_file = os.path.join('Новости на ' + currentDate + '.json')
 
     d = feedparser.parse(feed_link)
-
+    print(d)
     fact_mil_news = []
     for i in d.entries:
         fact_mil_news.append({'title': i.title,
@@ -28,9 +28,9 @@ def read_news():
                               'tag': i.tags[0].term})
 
     with open(out_file, 'w', encoding='utf-8') as f:
+
         json.dump(fact_mil_news, f, ensure_ascii=False, indent=4)
-
-
+        print('Записал')
 
 
 while True:
